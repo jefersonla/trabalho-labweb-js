@@ -183,6 +183,11 @@ function validarForm(){
 	// Na primeira execução
 	botaoResultao.removeClass("btn-primary");
 	
+	// Colore o elementos corretos
+	for(var i = 0; i < domValidado.success.length; i++){
+		domValidado.success[i].parent().removeClass("has-nothing").removeClass("has-error").addClass("has-success");
+	}	
+
 	if(domValidado.erro.length == 0){
 		// Muda o estilo e a mensagem do botão
 		botaoResultao.removeClass("btn-danger").addClass("btn-success");
@@ -193,11 +198,6 @@ function validarForm(){
 		return true;
 	}
 	
-	// Colore o elementos corretos
-	for(var i = 0; i < domValidado.success.length; i++){
-		domValidado.success[i].parent().removeClass("has-nothing").removeClass("has-error").addClass("has-success");
-	}	
-
 	// Colore os elementos incorretos
 	for(var i = 0; i < domValidado.erro.length; i++){
 		domValidado.erro[i].parent().removeClass("has-nothing").removeClass("has-success").addClass("has-error");
