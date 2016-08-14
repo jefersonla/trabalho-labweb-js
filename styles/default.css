@@ -1,0 +1,35 @@
+html{
+	height: 100%;
+}
+
+form{
+	text-align: center;
+}
+
+.form-group, .checkbox{
+	text-align:left;
+}
+
+#formulario{
+	margin-bottom: 30px;
+}
+
+.has-nothing .glyphicon{
+	display: none;
+}
+
+.has-success .glyphicon-ok{
+	display: inherit;
+}
+
+.has-success .glyphicon-remove{
+	display: none;
+}
+
+.has-error .glyphicon-ok{
+	display: none;
+}
+
+.has-error .glyphicon-remove{
+	display: inherit;
+}
